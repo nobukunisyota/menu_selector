@@ -1,0 +1,10 @@
+version: "3"
+services:
+  node:
+    container_name: MenuSelectorFrontend
+    build: .
+    tty: true
+    volumes:
+      - .:/workspace
+    ports:
+      - "3099:3000"
