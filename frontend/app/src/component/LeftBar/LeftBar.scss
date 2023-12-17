@@ -1,3 +1,35 @@
 .leftBar {
     background-color: #F2F2F2;
+    height: 100%;
+    width: 100%;
+    .leftBarHeader {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .menuList {
+        margin: 10px 10px 10px 10px;
+        font-size: 25px;
+        .addMenu {
+            display: flex;
+            align-items: center;
+        }
+        .homeMenu {
+            display: flex;
+            align-items: center;
+        }
+        .selectMenu {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .leftBarFooter {
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        position: fixed;
+        bottom: 0;
+    }
 }

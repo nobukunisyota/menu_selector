@@ -1,0 +1,16 @@
+.App {
+    display: flex;
+    height: 100vh;
+}
+
+.App > :first-child {
+    flex: 2;
+}
+
+.App > :nth-child(2) {
+    flex: 5;
+}
+
+.App > :last-child {
+    flex: 3;
+}
