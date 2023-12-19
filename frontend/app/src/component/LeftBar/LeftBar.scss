@@ -31,5 +31,10 @@
         margin-bottom: 5px;
         position: fixed;
         bottom: 0;
+        .css-i4bv87-MuiSvgIcon-root {
+            &:hover {
+                color: gray;
+            }
+        }
     }
 }
