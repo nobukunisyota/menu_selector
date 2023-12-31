@@ -5,3 +5,4 @@ recipes/__pycache__
 users/__pycache__
 recipes/migrations
 users/migrations
+media/
