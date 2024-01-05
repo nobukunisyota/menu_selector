@@ -2,8 +2,9 @@ import React, { useState, useEffect }  from 'react'
 import axios from 'axios';
 import './RecipeComponent.scss'
 
-function RecipeComponent() {
+function RecipeComponent({recipe_number}) {
     const [post, setPosts] = useState([])
+    const [filteredData, setFilteredData] = useState([]);
     useEffect(() => {
         const backendApi = process.env.REACT_APP_BACKEND_API;
         if (backendApi) {
@@ -16,18 +17,19 @@ function RecipeComponent() {
             })
         }
     }, [])
+    useEffect(() => {
+        const filteredData = post.filter(data => data.id === recipe_number);
+        setFilteredData(filteredData);
+    }, [post, recipe_number])
+
     return (
     <div className='recipeComponent'>
-        <ul>
-        {post.map(data => (
-            <p key={data.id}>{data.name}</p>
+        {filteredData.map(data => (
+            <div key={data.id}>{data.name}</div>
         ))}
-        </ul>
-        <ul>
-        {post.map(data => (
-            <p key={data.id}>{data.description}</p>
+        {filteredData.map(data => (
+            <div key={data.id}>{data.description}</div>
         ))}
-        </ul>
     </div>
     )
 }
