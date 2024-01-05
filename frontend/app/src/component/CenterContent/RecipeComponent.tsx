@@ -17,10 +17,15 @@ function RecipeComponent() {
         }
     }, [])
     return (
-    <div>
+    <div className='recipeComponent'>
         <ul>
         {post.map(data => (
-            <li key={data.id}>{data.name}</li>
+            <p key={data.id}>{data.name}</p>
+        ))}
+        </ul>
+        <ul>
+        {post.map(data => (
+            <p key={data.id}>{data.description}</p>
         ))}
         </ul>
     </div>
