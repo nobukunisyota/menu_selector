@@ -1,3 +1,14 @@
-.rightBarHeader {
+.rightBar {
     font-size: 15px;
+    background-color: #F2F2F2;
+    height: 100%;
+    width: 100%;
+    .rightBarHeader {
+        padding-right: 5px;
+    }
+    .historyBar {
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+    }
 }
